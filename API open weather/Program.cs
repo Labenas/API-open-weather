@@ -10,6 +10,7 @@ namespace API_open_weather
         static async System.Threading.Tasks.Task Main(string[] args)
         {
             HttpClient client = new HttpClient();
+        
             Console.WriteLine("Enter city you would like weather forecast to receive");
             var cityName = Console.ReadLine().ToLower();
 
@@ -28,7 +29,7 @@ namespace API_open_weather
             
            
             Console.WriteLine($"Current temperature in {cityName} is {myDeserializedClass.main.temp}C and it feels like {myDeserializedClass.main.feels_like}C  Today's day temperature from {myDeserializedClass.main.temp_min}C to {myDeserializedClass.main.temp_max}C");
-           
+            
         }
             
     }
